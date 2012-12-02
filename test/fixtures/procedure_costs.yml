@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  procedure_id: 1
+  cost: 1
+  start_date: 2012-11-09
+  end_date: 2012-11-09
+
+two:
+  procedure_id: 1
+  cost: 1
+  start_date: 2012-11-09
+  end_date: 2012-11-09

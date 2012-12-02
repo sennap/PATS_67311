@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  visit_id: 1
+  medicine_id: 1
+  units_given: 1
+  discount: 9.99
+
+two:
+  visit_id: 1
+  medicine_id: 1
+  units_given: 1
+  discount: 9.99

@@ -1,0 +1,18 @@
+<h2>Medicine Information:</h2>
+<b>Name:&nbsp;&nbsp;</b><br>
+  <%= @medicine.name %><br /><br />
+
+<b>Description:&nbsp;&nbsp;</b><br>
+  <%= @medicine.description %><br><br />
+  
+<b>Method:&nbsp;&nbsp;</b><br>
+  <%= @medicine.method %><br><br />
+    
+<b>Unit Type:&nbsp;&nbsp;</b><br>
+  <%= @medicine.unit %><br><br />
+
+<b>Units in stock:&nbsp;&nbsp;</b><br>
+  <%= @medicine.stock_amount %><br /><br />
+  
+<b>Vaccine?&nbsp;&nbsp;</b><br>
+  <%= (@medicine.vaccine ? "Yes" : "No") %><br /><br />

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  notable_type: MyString
+  notable_id: 1
+  title: MyString
+  content: MyText
+  user_id: 1
+  date: 2012-11-09
+
+two:
+  notable_type: MyString
+  notable_id: 1
+  title: MyString
+  content: MyText
+  user_id: 1
+  date: 2012-11-09

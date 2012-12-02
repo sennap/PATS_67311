@@ -1,0 +1,19 @@
+<table>
+	<tr valign="top">	
+		<td width="300">
+			<%= render :partial => "medicine_data" %>
+		</td>
+		<td width="10">&nbsp;</td>
+		<td width="250">
+			<% unless @for_animals.empty? %>
+			  <%= render :partial => "for_animals" %>
+			<% end %>
+		</td>
+	</tr>
+</table>
+<p class="smtext">&nbsp;</p>
+<p>&nbsp;
+  <%= link_to "Edit", edit_medicine_path(@medicine) %> |
+  <%= link_to "Destroy", @medicine, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", medicines_path %>
+</p>

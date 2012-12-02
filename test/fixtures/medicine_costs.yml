@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  medicine_id: 1
+  cost_per_unit: 1
+  start_date: 2012-11-09
+  end_date: 2012-11-09
+
+two:
+  medicine_id: 1
+  cost_per_unit: 1
+  start_date: 2012-11-09
+  end_date: 2012-11-09

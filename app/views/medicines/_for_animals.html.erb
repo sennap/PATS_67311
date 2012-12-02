@@ -1,0 +1,13 @@
+<h2>For Animals:</h2>
+<table class="datagrid">
+  <thead class="datagrid">
+    <th width="90">&nbsp;</th>
+  </thead>
+  
+<% for animal in @for_animals %>
+  <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+    <td align="left">&nbsp;<%= link_to animal.name, animal_path(animal) %></td>
+  </tr>
+<% end %>
+</table>
+<p class="supertiny">&nbsp;</p>

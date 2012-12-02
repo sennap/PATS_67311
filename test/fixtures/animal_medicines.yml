@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  animal_id: 1
+  medicine_id: 1
+  recommended_num_of_units: 1
+
+two:
+  animal_id: 1
+  medicine_id: 1
+  recommended_num_of_units: 1

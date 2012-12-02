@@ -1,0 +1,22 @@
+<h1>Users in the PATS system</h1><br>
+
+<table class="datagrid">
+  <thead class="datagrid">
+    <th>User</th>
+    <th>Username</th>
+		<th>&nbsp;</th>
+  </thead>
+  <% for user in @users %>
+    <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+      <td><%= link_to "#{user.last_name}, #{user.first_name}", user_path(user) %></td>
+      <td><%= user.username %></td>
+	  	<td align="center">
+				<%= link_to(image_tag("icons/edit_dg.gif", :border => 0), edit_user_path(user))  %>
+				<%= link_to(image_tag("icons/delete_dg.gif", :border => 0), user_path(user), :confirm => 'Are you sure you wish to delete this information?', :method => :delete) %>
+	  	</td>
+    </tr>
+  <% end %>
+</table>
+<p class="supertiny"></p>
+
+<p><strong><%= link_to "Add A New User", new_user_path %></strong></p>

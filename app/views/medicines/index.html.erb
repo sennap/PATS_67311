@@ -1,0 +1,31 @@
+<h1>Medicines offered by PATS</h1><br>
+
+<table class="datagrid">
+  <thead class="datagrid">
+    <th>Medicine</th>
+    <th>Method</th>
+		<th>Unit Type</th>
+		<th>Units Available</th>
+		<th>&nbsp;</th>
+  </thead>
+  <% for medicine in @medicines %>
+    <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
+      <td><%= link_to "#{medicine.name}", medicine_path(medicine) %></td>
+      <td><%= medicine.method %></td>
+      <td><%= medicine.unit %></td>
+      <td><%= medicine.stock_amount %></td>
+	  	<td align="center">
+				<%= link_to(image_tag("icons/edit_dg.gif", :border => 0), edit_medicine_path(medicine))  %>
+				<%= link_to(image_tag("icons/delete_dg.gif", :border => 0), medicine_path(medicine), :confirm => 'Are you sure you wish to delete this information?', :method => :delete) %>
+	  	</td>
+    </tr>
+  <% end %>
+</table>
+<p class="supertiny"></p>
+
+<!-- Add the pagination using will_paginate gem -->
+<span class="smtext">
+<%= will_paginate @medicine, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+</span>
+
+<p><strong><%= link_to "Add A New Medicine", new_medicine_path %></strong></p>
