@@ -1,0 +1,10 @@
+<div id="notes">
+<% for note in @notes %>
+  <div class="note">
+    <strong><%= note.title %></strong><br>
+    <%= note.contents %><br>	
+		by <strong><%= note.user.proper_name %></strong>
+	  <em>on <%= note.date.strftime('%b %d, %Y') %></em>
+  </div>
+<% end %>
+</div>

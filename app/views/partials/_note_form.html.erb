@@ -1,0 +1,32 @@
+<p class="supertiny">&nbsp;</p>
+<h3>Add a Note</h3><br />
+
+<%= form_for([@notable, Note.new], :html => { :class => 'form-horizontal' }) do |f| %>
+  <fieldset>
+    <div class="control-group">
+      <%= f.label :title, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :title %>
+      </div>
+    </div>
+    
+    <div class="control-group">
+      <%= f.label :contents, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :contents, :class => 'text_area', :rows => 4 %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :priority, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.select :priority, Note::PRIORITIES, :prompt => "Choose ..." %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', home_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>
