@@ -1,2 +1,14 @@
 Use this README file to introduce your application and point to useful places in the API for learning more.
 Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+
+
+Below is a method to be added as a private method towards the bottom of notes_controller.rb
+
+def find_notable
+  params.each do |name, value|
+    if name =~ /(.+)_id$/
+      return $1.classify.constantize.find(value)
+    end
+  end
+  nil
+end
