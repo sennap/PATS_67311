@@ -14,7 +14,9 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     # get the last 10 visits for this pet
     @recent_visits = @pet.visits.all.last(10)
-    respond_with @pet
+    @notes = @pet.notes
+    @notable = @pet
+    respond_with @pet 
   end
 
   def new

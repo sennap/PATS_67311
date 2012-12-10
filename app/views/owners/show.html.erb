@@ -17,3 +17,4 @@
   <%= link_to "Destroy", @owner, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", owners_path %>
 </p>
+<%= render :partial => "partials/add_notes_to_page", :locals => {:obj => @owner} %>

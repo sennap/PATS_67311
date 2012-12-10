@@ -8,7 +8,8 @@ class Visit < ActiveRecord::Base
   has_many :medicines, :through => :visit_medicines
   has_many :treatments
   has_many :procedures, :through => :treatments
-  
+  has_many :notes, :as => :notable, :dependent => :destroy
+ 
   # Scopes
   # -----------------------------
   # by default, order by visits in descending order (most recent first)

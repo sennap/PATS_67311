@@ -6,7 +6,7 @@ class Owner < ActiveRecord::Base
   # -----------------------------
   has_many :pets # :dependent => :destroy  (:nullify option will break link, but leaves orphan records)
   has_many :visits, :through => :pets
-  
+  has_many :notes, :as => :notable, :dependent => :destroy 
   
   # Scopes
   # -----------------------------

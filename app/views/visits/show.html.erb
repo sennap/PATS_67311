@@ -19,21 +19,10 @@
   <strong>Weight:</strong>
   <%= @visit.weight %> lbs.
 </p>
-<% unless @vaccinations.empty? %>
-	<p>
-	  <strong>Vaccinations:</strong>
-	  <% for vaccination in @vaccinations %>
-		<%= link_to vaccination.vaccine.name, vaccination_path(vaccination) %>
-	  <% end %>
-	</p>
-<p>
-<% end %>
-  <strong>Notes:</strong>
-  <%= @visit.notes %>
-</p>
 <p class="supertiny">&nbsp;</p>
 <p>
   <%= link_to "Edit", edit_visit_path(@visit) %> |
   <%= link_to "Destroy", @visit, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", visits_path %>
 </p>
+<%= render :partial => "partials/add_notes_to_page", :locals => {:obj => @visit} %> 

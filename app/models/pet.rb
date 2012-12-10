@@ -7,7 +7,7 @@ class Pet < ActiveRecord::Base
   has_many :visits
   has_many :visit_medicines, :through => :visits
   has_many :medicines, :through => :visit_medicines
-
+  has_many :notes, :as => :notable, :dependent => :destroy
 
   # Scopes
   # -----------------------------

@@ -9,6 +9,8 @@ class OwnersController < ApplicationController
     @owner = Owner.find(params[:id])
     # get all the pets for this owner
     @current_pets = @owner.pets.active.all
+    @notes = @owner.notes
+    @notable = @owner
   end
 
   def new

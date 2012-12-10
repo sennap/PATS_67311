@@ -10,10 +10,16 @@ PATS67272::Application.routes.draw do
   resources :users
   
   # Generated model routes
-  resources :owners
+  resources :owners do
+	resources :notes
+  end
   resources :animals
-  resources :pets
-  resources :visits    
+  resources :pets do
+	resources :notes
+  end
+  resources :visits do
+	resources :notes    
+  end 
   resources :medicines
   resources :procedures
   resources :medicine_costs

@@ -2,7 +2,7 @@ class MedicinesController < ApplicationController
 
   def index
     # finding all the active medicines and paginating that list (will_paginate)
-    @medicines = Medicine.active.alphabetical.paginate(:page => params[:page]).per_page(10)
+   #@medicines = Medicine.active.alphabetical.paginate(:page => params[:page]).per_page(10)
   end
 
   def show
